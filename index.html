@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinalShowdown - Q3 & Q4 Quiz</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -145,7 +146,7 @@
         const quiz3Data = [
             {id:301,module:"q3",question:"Which of the following is true about multiplexing?",options:["Multiplexing is a form of modulation done at the transmitter side to convert analog signals to digital signals.","Space division multiplexing allows multiple input sources to be carried via the same medium but not at the same time.","In FDM, signals from multiple sources are interleaved by bits, bytes, or frames.","Statistical TDM allows prioritization of channels by assigning different numbers of time slots for each input."],correctIndex:3},
             {id:302,module:"q3",question:"Which of the following is true about CDM?",options:["Each user is assigned a pseudo-random code, which should be orthogonal to all the other codes.","The receiver has prior knowledge of the orthogonal code.","The orthogonal code spreads the signal such that the resulting signal will have higher bandwidth.","All of the choices"],correctIndex:3},
-            {id:303,module:"q3",question:"Packet Switching is a method that transmits digital information which are cut into smaller pieces of information that may take different routes.",type:"identification",correctAnswer:"Packet switching"},
+            {id:303,module:"q3",question:"________ is a method that transmits digital information which are cut into smaller pieces of information that may take different routes.",type:"identification",correctAnswer:"Packet switching"},
             {id:304,module:"q3",question:"________ Approach is a packet switching approach wherein each packet takes different routes and is routed depending on the identifiers in the packet.",type:"identification",correctAnswer:"Datagram"},
             {id:305,module:"q3",question:"In circuit switching, ________ is a method wherein paths are separated spatially and requires interconnection in a grid to complete the end-to-end physical link.",options:["Crossbar switch","TSI incorrect","TDM bus","None of the choices"],correctIndex:0},
             {id:306,module:"q3",question:"In circuit switching, ________ is a method wherein a path between an output and input is managed by a control unit depending on the allotted time slot.",options:["Crossbar switch","TSI incorrect","TDM bus","None of the choices"],correctIndex:2},
@@ -173,10 +174,10 @@
         const quiz4Data = [
             {id:401,module:"q4",question:"A nonprofit US trade association that establishes and recommends industrial standards.",options:["IEEE","EIA","TIA","ISO"],correctIndex:1},
             {id:402,module:"q4",question:"A standards organization responsible for the 802.xx series standards.",options:["IEEE","EIA","TIA","ISO"],correctIndex:0},
-            {id:403,module:"q4",question:"ANSI is the official standards agency of the US (acronym).",type:"identification",correctAnswer:"American National Standards Institute"},
-            {id:404,module:"q4",question:"ETSI is the European Standards Organization dealing with telecommunications, broadcasting, and other communication services (acronym).",type:"identification",correctAnswer:"European Telecommunications Standards Institute"},
+            {id:403,module:"q4",question:"________ is the official standards agency of the US.",type:"identification",correctAnswer:"American National Standards Institute",alternateAnswers:["ANSI"]},
+            {id:404,module:"q4",question:"________ is the European Standards Organization dealing with telecommunications, broadcasting, and other communication services.",type:"identification",correctAnswer:"European Telecommunications Standards Institute",alternateAnswers:["ETSI"]},
             {id:405,module:"q4",question:"IETF is a technical advisory group of the Internet Society that oversees the architecture and procedures used in the Internet.",options:["TRUE","FALSE"],correctIndex:1},
-            {id:406,module:"q4",question:"RFC are documents maintained by IETF containing information about Internet Protocols (acronym).",type:"identification",correctAnswer:"Request for Comments"},
+            {id:406,module:"q4",question:"________ are documents maintained by IETF containing information about Internet Protocols.",type:"identification",correctAnswer:"Request for Comments",alternateAnswers:["RFC"]},
             {id:407,module:"q4",question:"An organization that promotes long-term research of importance to the evolution of the future Internet.",options:["IETF","IRTF (Internet Research Task Force)","IAB","IEEE"],correctIndex:1},
             {id:408,module:"q4",question:"It is a non-treaty organization whose membership is comprised mainly of standards organizations of various countries and is responsible for Open Systems Interconnect (OSI) model.",options:["IEEE","IETF","ITU","ISO"],correctIndex:3},
             {id:409,module:"q4",question:"It is the United Nations specialized agency for information and communication technologies (ICTs).",options:["IEEE","IETF","ITU","ISO"],correctIndex:2},
@@ -262,8 +263,8 @@
             {id:608,module:"seta",question:"________ is a signal which is discrete and its amplitude maintains a constant level for a prescribed period of time.",type:"identification",correctAnswer:"Digital Signal"},
             {id:609,module:"seta",question:"Which of the following refers to as the number of signaling element per second in a transmission medium?",options:["Bit Rate","Throughput","Baud Rate","Bandwidth"],correctIndex:2},
             {id:610,module:"seta",question:"Which of the following is not one of the four standard encodings used for QR codes?",options:["alphanumeric","kanji","nibble","byte"],correctIndex:2},
-            {id:611,module:"seta",question:"In RS232, RTS stands for",type:"identification",correctAnswer:"Request to Send",alternateAnswers:["RTS"]},
-            {id:612,module:"seta",question:"In RS232, CD stands for",type:"identification",correctAnswer:"Carrier Detect",alternateAnswers:["CD"]},
+            {id:611,module:"seta",question:"In RS232, ________ is a signal used by the DTE to request permission to transmit data.",type:"identification",correctAnswer:"Request to Send",alternateAnswers:["RTS"]},
+            {id:612,module:"seta",question:"In RS232, ________ is a signal that indicates that the modem is receiving a carrier signal.",type:"identification",correctAnswer:"Carrier Detect",alternateAnswers:["CD"]},
             {id:613,module:"seta",question:"Which of the following serial interface characteristics specifies the different signals such as data and control?",options:["Mechanical","Electrical","Functional","Procedural"],correctIndex:2},
             {id:614,module:"seta",question:"Which of the following is a control signal in EIA/RS232 standard?",options:["request to send","shield","secondary transmitted data","ground"],correctIndex:0},
             {id:615,module:"seta",question:"________ is a test and troubleshooting box used for serial and parallel cables.",type:"identification",correctAnswer:"Breakout Box",alternateAnswers:["Continuity Tester"]},

@@ -49,14 +49,15 @@
             <h1 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
                 <i class="fa-solid fa-bolt text-amber-500"></i>
                 <span>FinalShowdown</span>
-                <span class="text-slate-400 dark:text-slate-500 font-normal text-xs sm:text-sm ml-1 hidden md:inline">Q3 & Q4 Combined</span>
+                <span class="text-slate-400 dark:text-slate-500 font-normal text-xs sm:text-sm ml-1 hidden md:inline">Made by: Noktiks</span>
             </h1>
             <div class="flex items-center gap-2 sm:gap-4 w-full sm:w-auto justify-between sm:justify-end">
                 <select id="module-filter" onchange="filterQuestions()" class="bg-slate-50 dark:bg-slate-700 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 text-xs sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-1.5 sm:p-2 flex-1 sm:flex-none max-w-[180px] sm:max-w-none">
-                    <option value="all">All Questions (100)</option>
+                    <option value="all">All Questions (140)</option>
                     <option value="q3">Quiz 3 - Test 1 (25)</option>
                     <option value="q4">Quiz 4 - Test 2 (25)</option>
                     <option value="finals">📝 Finals (50)</option>
+                    <option value="seta">📘 Set A (40)</option>
                 </select>
                 <div class="text-xs sm:text-sm font-medium text-slate-500 dark:text-slate-400 bg-slate-100 dark:bg-slate-700 px-2 sm:px-3 py-1 rounded-full whitespace-nowrap">
                     <span id="current-q-num">1</span> / <span id="total-q-num">--</span>
@@ -118,7 +119,8 @@
 
     <footer class="bg-slate-50 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 mt-auto py-4 sm:py-6 transition-colors">
         <div class="max-w-3xl mx-auto px-4 text-center text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
-            <p>FinalShowdown: Quiz 3, Quiz 4 & Finals Combined (100 Questions)</p>
+            <p class="mb-1">FinalShowdown • 140 Questions</p>
+            <p class="text-xs italic opacity-75">"✨ Don't give up on something you can't go a day without thinking about."</p>
         </div>
     </footer>
 
@@ -249,7 +251,50 @@
             {id:550,module:"finals",question:"IEEE 802.15.1 is the equivalent standard for Bluetooth.",options:["True","False"],correctIndex:0}
         ];
 
-        const allQuizData = [...quiz3Data, ...quiz4Data, ...finalsData];
+        const setAData = [
+            {id:601,module:"seta",question:"________ is the source of the information, which can be a computer, an electronic device or a sensor.",options:["Sensor","Message","Receiver","Transmission Medium"],correctIndex:0},
+            {id:602,module:"seta",question:"What type of signal can be measured at the output of a CODEC?",options:["coherent signal","digital signal","carrier signal","modulated signal"],correctIndex:1},
+            {id:603,module:"seta",question:"________ is a network criterion where the effectiveness of the network is measured in terms of throughput and delay.",options:["Performance","Reliability","Security","Quality"],correctIndex:0},
+            {id:604,module:"seta",question:"Which of the following converts an analog signal to digital signal and vice versa?",options:["Telephone","Digital Transmitter","Codec","None of the choices"],correctIndex:2},
+            {id:605,module:"seta",question:"Which of the following is an example of a data terminal equipment?",options:["Modem","Line Control Unit","CSU/DSU","All of the choices"],correctIndex:1},
+            {id:606,module:"seta",question:"Which of the following can be used to transmit Morse code?",options:["Electric current","Radio Waves","Visible Light","All of the choices"],correctIndex:3},
+            {id:607,module:"seta",question:"________ refers to the rate of change of signal in a transmission (communications) medium after encoding and modulation have occurred.",type:"identification",correctAnswer:"Baud Rate"},
+            {id:608,module:"seta",question:"________ is a signal which is discrete and its amplitude maintains a constant level for a prescribed period of time.",type:"identification",correctAnswer:"Digital Signal"},
+            {id:609,module:"seta",question:"Which of the following refers to as the number of signaling element per second in a transmission medium?",options:["Bit Rate","Throughput","Baud Rate","Bandwidth"],correctIndex:2},
+            {id:610,module:"seta",question:"Which of the following is not one of the four standard encodings used for QR codes?",options:["alphanumeric","kanji","nibble","byte"],correctIndex:2},
+            {id:611,module:"seta",question:"In RS232, RTS stands for",type:"identification",correctAnswer:"Request to Send",alternateAnswers:["RTS"]},
+            {id:612,module:"seta",question:"In RS232, CD stands for",type:"identification",correctAnswer:"Carrier Detect",alternateAnswers:["CD"]},
+            {id:613,module:"seta",question:"Which of the following serial interface characteristics specifies the different signals such as data and control?",options:["Mechanical","Electrical","Functional","Procedural"],correctIndex:2},
+            {id:614,module:"seta",question:"Which of the following is a control signal in EIA/RS232 standard?",options:["request to send","shield","secondary transmitted data","ground"],correctIndex:0},
+            {id:615,module:"seta",question:"________ is a test and troubleshooting box used for serial and parallel cables.",type:"identification",correctAnswer:"Breakout Box",alternateAnswers:["Continuity Tester"]},
+            {id:616,module:"seta",question:"What error results when transmission speed for transmitter and receiver are not the same?",type:"identification",correctAnswer:"Framing Error"},
+            {id:617,module:"seta",question:"________ is the bit pattern at the end of the frame of a synchronous data transmission.",type:"identification",correctAnswer:"Flag",alternateAnswers:["Closing Flag"]},
+            {id:618,module:"seta",question:"Which type of data transmission mode is ATM?",options:["synchronous","asynchronous","plesiochronous","isochronous"],correctIndex:1},
+            {id:619,module:"seta",question:"Which type of data transmission is used when the transmit and receive devices are synchronized but set to different clocks and uses bit stuffing to compensate for the time slippage?",options:["synchronous","asynchronous","plesiochronous","isochronous"],correctIndex:2},
+            {id:620,module:"seta",question:"Which of the following occurs when a character arrives at the receiver but cannot be handled by the receiver?",options:["Parse Error","Data Overrun","Parity Error","Frame Error"],correctIndex:1},
+            {id:621,module:"seta",question:"It is a type of error where a data string contains two or more consecutive bits in error.",options:["Single Bit","Dibit","Multiple Bit","Burst"],correctIndex:3},
+            {id:622,module:"seta",question:"The following data are transmitted and received: Transmitted = 11110000, Received = 11110010. Which transmission error occurred?",options:["Single Bit","Dibit","Burst","Multiple Bit"],correctIndex:0},
+            {id:623,module:"seta",question:"It is a redundancy checking technique where binary addition is performed on the data to produce checksum, if a carry out occurs, the carry bit is added to the LSB of the sum.",options:["single precision","double precision","honeywell","residue"],correctIndex:3},
+            {id:624,module:"seta",question:"When expressing CRC mathematically, which of the following is the dividend?",options:["generator polynomial","message polynomial","block check character","none of the choices"],correctIndex:1},
+            {id:625,module:"seta",question:"How many redundant bits are needed in Hamming Code transmission if the message contains 8 bits?",type:"identification",correctAnswer:"4"},
+            {id:626,module:"seta",question:"In UART Transmit operation, which of the following is sent from the UART to the CPU?",options:["TBMT","SWE","TDS","TEOC"],correctIndex:0},
+            {id:627,module:"seta",question:"What is a temporary storage of data in a UART?",type:"identification",correctAnswer:"Buffer Register",alternateAnswers:["Holding Register"]},
+            {id:628,module:"seta",question:"Which UART component converts parallel to serial or serial to parallel form of data?",type:"identification",correctAnswer:"Shift Register"},
+            {id:629,module:"seta",question:"In UART bit synchronization, the maximum detection error is equal to the time of one bit in the incoming bit stream.",options:["TRUE","FALSE"],correctIndex:1},
+            {id:630,module:"seta",question:"An encoding circuit is used at the UART receiver determine a valid start bit.",options:["TRUE","FALSE"],correctIndex:1},
+            {id:631,module:"seta",question:"The actual bandwidth of a system depends on:",options:["system noise","encoding","system filter","all of the choices"],correctIndex:3},
+            {id:632,module:"seta",question:"What is the baud rate of a binary ASK system with 10 kbps rate?",type:"identification",correctAnswer:"10,000 baud",alternateAnswers:["10000 baud","10000","10,000"]},
+            {id:633,module:"seta",question:"What is the baud rate of the 8QAM system given the bit rate of 120 kbps?",type:"identification",correctAnswer:"40 kbaud",alternateAnswers:["40000 baud","40000","40,000 baud"]},
+            {id:634,module:"seta",question:"Which of the following digital modulation techniques have a different baud rate from the others?",options:["PSK (BPSK)","QPSK","ASK","none of the choices"],correctIndex:1},
+            {id:635,module:"seta",question:"Which of the following is true about bandwidth efficiency?",options:["It describes the bandwidth compression","It can be used to compare the performance of different digital modulation techniques","It is the ratio of the number of bits that can be propagated to the minimum bandwidth","All of the choices"],correctIndex:3},
+            {id:636,module:"seta",question:"If the highest fundamental frequency of an analog signal is 10 kHz, which of the following is a valid sampling rate to ensure that there is no aliasing?",options:["20 kHz","50 kHz","100 kHz","all of the choices"],correctIndex:3},
+            {id:637,module:"seta",question:"Quantization in PCM is equivalent to additive noise because it alters the signal amplitude due to rounding off to the nearest valid code.",options:["TRUE","FALSE"],correctIndex:0},
+            {id:638,module:"seta",question:"PPM is a pulse modulation technique which generates constant power and variable width pulses.",options:["TRUE","FALSE"],correctIndex:1},
+            {id:639,module:"seta",question:"Delta Modulation transmits only the amplitude difference between the current sample and the previous sample.",options:["TRUE","FALSE"],correctIndex:1},
+            {id:640,module:"seta",question:"Which of the following is true for non-linear PCM codes compared to linear PCM codes?",options:["is decreased...","Step size is not constant","High amplitude voltages will have more quantizing levels","none of the choices"],correctIndex:1}
+        ];
+
+        const allQuizData = [...quiz3Data, ...quiz4Data, ...finalsData, ...setAData];
         let filteredQuizData = [...allQuizData];
         let currentQuestionIndex = 0;
         let userAnswers = {};
@@ -349,6 +394,7 @@
             else if (filterValue === 'q3') filteredQuizData = [...quiz3Data];
             else if (filterValue === 'q4') filteredQuizData = [...quiz4Data];
             else if (filterValue === 'finals') filteredQuizData = [...finalsData];
+            else if (filterValue === 'seta') filteredQuizData = [...setAData];
             userAnswers = {};
             revealState = {};
             identificationAnswers = {};
@@ -383,7 +429,7 @@
             }
 
             const isReviewMode = Object.values(revealState).filter(v => v === true).length === filteredQuizData.length;
-            const quizLabel = data.module === 'q3' ? 'Quiz 3' : data.module === 'q4' ? 'Quiz 4' : 'Finals';
+            const quizLabel = data.module === 'q3' ? 'Quiz 3' : data.module === 'q4' ? 'Quiz 4' : data.module === 'finals' ? 'Finals' : 'Set A';
             const reviewBadge = isReviewMode ? '<span class="bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300 text-xs font-bold px-2.5 py-0.5 rounded border border-indigo-200 dark:border-indigo-700"><i class="fa-solid fa-magnifying-glass mr-1"></i>Review Mode</span>' : '';
 
             container.innerHTML = `

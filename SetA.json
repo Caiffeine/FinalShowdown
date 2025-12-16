@@ -1,0 +1,375 @@
+{
+  "test_title": "ECE 21128 Set A",
+  "questions": [
+    {
+      "question_number": 1,
+      "question": "________ is the source of the information, which can be a computer, an electronic device or a sensor.",
+      "choices": [
+        "a. Sensor",
+        "b. Message",
+        "c. Receiver",
+        "d. Transmission Medium"
+      ],
+      "correct_answer": "a. Sensor"
+    },
+    {
+      "question_number": 2,
+      "question": "What type of signal can be measured at the output of a CODEC?",
+      "choices": [
+        "a. coherent signal",
+        "b. digital signal",
+        "c. carrier signal",
+        "d. modulated signal"
+      ],
+      "correct_answer": "b. digital signal"
+    },
+    {
+      "question_number": 3,
+      "question": "________ is a network criterion where the effectiveness of the network is measured in terms of throughput and delay.",
+      "choices": [
+        "a. Performance",
+        "b. Reliability",
+        "c. Security",
+        "d. Quality"
+      ],
+      "correct_answer": "a. Performance"
+    },
+    {
+      "question_number": 4,
+      "question": "Which of the following converts an analog signal to digital signal and vice versa?",
+      "choices": [
+        "a. Telephone",
+        "b. Digital Transmitter",
+        "c. Codec",
+        "d. None of the choices"
+      ],
+      "correct_answer": "c. Codec"
+    },
+    {
+      "question_number": 5,
+      "question": "Which of the following is an example of a data terminal equipment?",
+      "choices": [
+        "a. Modem",
+        "b. Line Control Unit",
+        "c. CSU/DSU",
+        "d. All of the choices"
+      ],
+      "correct_answer": "b. Line Control Unit"
+    },
+    {
+      "question_number": 6,
+      "question": "Which of the following can be used to transmit Morse code?",
+      "choices": [
+        "(a) Electric current",
+        "(b) Radio Waves",
+        "(c) Visible Light",
+        "(d) All of the choices"
+      ],
+      "correct_answer": "(d) All of the choices"
+    },
+    {
+      "question_number": 7,
+      "question": "________ refers to the rate of change of signal in a transmission (communications) medium after encoding and modulation have occurred.",
+      "choices": [],
+      "correct_answer": "Baud Rate"
+    },
+    {
+      "question_number": 8,
+      "question": "________ is a signal which is discrete and its amplitude maintains a constant level for a prescribed period of time.",
+      "choices": [],
+      "correct_answer": "Digital Signal"
+    },
+    {
+      "question_number": 9,
+      "question": "Which of the following refers to as the number of signaling element per second in a transmission medium?",
+      "choices": [
+        "(a) Bit Rate",
+        "(b) Throughput",
+        "(c) Baud Rate",
+        "(d) Bandwidth"
+      ],
+      "correct_answer": "(c) Baud Rate"
+    },
+    {
+      "question_number": 10,
+      "question": "Which of the following is not one of the four standard encodings used for QR codes?",
+      "choices": [
+        "(a) alphanumeric",
+        "(b) kanji",
+        "(c) nibble",
+        "(d) byte"
+      ],
+      "correct_answer": "(c) nibble"
+    },
+    {
+      "question_number": 11,
+      "question": "In RS232, RTS stands for",
+      "choices": [],
+      "correct_answer": "Request to Send"
+    },
+    {
+      "question_number": 12,
+      "question": "In RS232, CD stands for",
+      "choices": [],
+      "correct_answer": "Carrier Detect"
+    },
+    {
+      "question_number": 13,
+      "question": "Which of the following serial interface characteristics specifies the different signals such as data and control?",
+      "choices": [
+        "(a) Mechanical",
+        "(b) Electrical",
+        "(c) Functional",
+        "(d) Procedural"
+      ],
+      "correct_answer": "(c) Functional"
+    },
+    {
+      "question_number": 14,
+      "question": "Which of the following is a control signal in EIA/RS232 standard?",
+      "choices": [
+        "(a) request to send",
+        "(b) shield",
+        "(c) secondary transmitted data",
+        "(d) ground"
+      ],
+      "correct_answer": "(a) request to send"
+    },
+    {
+      "question_number": 15,
+      "question": "________ is a test and troubleshooting box used for serial and parallel cables.",
+      "choices": [],
+      "correct_answer": "Breakout Box (or Continuity Tester)"
+    },
+    {
+      "question_number": 16,
+      "question": "What error results when transmission speed for transmitter and receiver are not the same?",
+      "choices": [],
+      "correct_answer": "Framing Error"
+    },
+    {
+      "question_number": 17,
+      "question": "________ is the bit pattern at the end of the frame of a synchronous data transmission.",
+      "choices": [],
+      "correct_answer": "Flag (or Closing Flag)"
+    },
+    {
+      "question_number": 18,
+      "question": "Which type of data transmission mode is ATM?",
+      "choices": [
+        "(a) synchronous",
+        "(b) asynchronous",
+        "(c) plesiochronous",
+        "(d) isochronous"
+      ],
+      "correct_answer": "(b) asynchronous"
+    },
+    {
+      "question_number": 19,
+      "question": "Which type of data transmission is used when the transmit and receive devices are synchronized but set to different clocks and uses bit stuffing to compensate for the time slippage?",
+      "choices": [
+        "(a) synchronous",
+        "(b) asynchronous",
+        "(c) plesiochronous",
+        "(d) isochronous"
+      ],
+      "correct_answer": "(c) plesiochronous"
+    },
+    {
+      "question_number": 20,
+      "question": "Which of the following occurs when a character arrives at the receiver but cannot be handled by the receiver?",
+      "choices": [
+        "(a) Parse Error",
+        "(b) Data Overrun",
+        "(c) Parity Error",
+        "(d) Frame Error"
+      ],
+      "correct_answer": "(b) Data Overrun"
+    },
+    {
+      "question_number": 21,
+      "question": "It is a type of error where a data string contains two or more consecutive bits in error.",
+      "choices": [
+        "(a) Single Bit",
+        "(b) Dibit",
+        "(c) Multiple Bit",
+        "(d) Burst"
+      ],
+      "correct_answer": "(d) Burst"
+    },
+    {
+      "question_number": 22,
+      "question": "The following data are transmitted and received: Transmitted = 11110000, Received = 11110010. Which transmission error occurred?",
+      "choices": [
+        "(a) Single Bit",
+        "(b) Dibit",
+        "(c) Burst",
+        "(d) Multiple Bit"
+      ],
+      "correct_answer": "(a) Single Bit"
+    },
+    {
+      "question_number": 23,
+      "question": "It is a redundancy checking technique where binary addition is performed on the data to produce checksum, if a carry out occurs, the carry bit is added to the LSB of the sum.",
+      "choices": [
+        "(a) single precision",
+        "(b) double precision",
+        "(c) honeywell",
+        "(d) residue"
+      ],
+      "correct_answer": "(d) residue (or Checksum)"
+    },
+    {
+      "question_number": 24,
+      "question": "When expressing CRC mathematically, which of the following is the dividend?",
+      "choices": [
+        "(a) generator polynomial",
+        "(b) message polynomial",
+        "(c) block check character",
+        "(d) none of the choices"
+      ],
+      "correct_answer": "(b) message polynomial"
+    },
+    {
+      "question_number": 25,
+      "question": "How many redundant bits are needed in Hamming Code transmission if the message contains 8 bits?",
+      "choices": [],
+      "correct_answer": "4"
+    },
+    {
+      "question_number": 26,
+      "question": "In UART Transmit operation, which of the following is sent from the UART to the CPU?",
+      "choices": [
+        "(a) TBMT",
+        "(b) SWE",
+        "(c) TDS",
+        "(d) TEOC"
+      ],
+      "correct_answer": "(a) TBMT"
+    },
+    {
+      "question_number": 27,
+      "question": "What is a temporary storage of data in a UART?",
+      "choices": [],
+      "correct_answer": "Buffer Register (or Holding Register)"
+    },
+    {
+      "question_number": 28,
+      "question": "Which UART component converts parallel to serial or serial to parallel form of data?",
+      "choices": [],
+      "correct_answer": "Shift Register"
+    },
+    {
+      "question_number": 29,
+      "question": "In UART bit synchronization, the maximum detection error is equal to the time of one bit in the incoming bit stream.",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "correct_answer": "FALSE"
+    },
+    {
+      "question_number": 30,
+      "question": "An encoding circuit is used at the UART receiver determine a valid start bit.",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "correct_answer": "FALSE"
+    },
+    {
+      "question_number": 31,
+      "question": "The actual bandwidth of a system depends on:",
+      "choices": [
+        "(a) system noise",
+        "(b) encoding",
+        "(c) system filter",
+        "(d) all of the choices"
+      ],
+      "correct_answer": "(d) all of the choices"
+    },
+    {
+      "question_number": 32,
+      "question": "What is the baud rate of a binary ASK system with 10 kbps rate?",
+      "choices": [],
+      "correct_answer": "10,000 baud"
+    },
+    {
+      "question_number": 33,
+      "question": "What is the baud rate of the 8QAM system given the bit rate of 120 kbps?",
+      "choices": [],
+      "correct_answer": "40 kbaud"
+    },
+    {
+      "question_number": 34,
+      "question": "Which of the following digital modulation techniques have a different baud rate from the others?",
+      "choices": [
+        "(a) PSK (BPSK)",
+        "(b) QPSK",
+        "(c) ASK",
+        "(d) none of the choices"
+      ],
+      "correct_answer": "(b) QPSK"
+    },
+    {
+      "question_number": 35,
+      "question": "Which of the following is true about bandwidth efficiency?",
+      "choices": [
+        "(a) It describes the bandwidth compression",
+        "(b) It can be used to compare the performance of different digital modulation techniques",
+        "(c) It is the ratio of the number of bits that can be propagated to the minimum bandwidth",
+        "(d) All of the choices"
+      ],
+      "correct_answer": "(d) All of the choices"
+    },
+    {
+      "question_number": 36,
+      "question": "If the highest fundamental frequency of an analog signal is 10 kHz, which of the following is a valid sampling rate to ensure that there is no aliasing?",
+      "choices": [
+        "(a) 20 kHz",
+        "(b) 50 kHz",
+        "(c) 100 kHz",
+        "(d) all of the choices"
+      ],
+      "correct_answer": "(d) all of the choices"
+    },
+    {
+      "question_number": 37,
+      "question": "Quantization in PCM is equivalent to additive noise because it alters the signal amplitude due to rounding off to the nearest valid code.",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "correct_answer": "TRUE"
+    },
+    {
+      "question_number": 38,
+      "question": "PPM is a pulse modulation technique which generates constant power and variable width pulses.",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "correct_answer": "FALSE"
+    },
+    {
+      "question_number": 39,
+      "question": "Delta Modulation transmits only the amplitude difference between the current sample and the previous sample.",
+      "choices": [
+        "TRUE",
+        "FALSE"
+      ],
+      "correct_answer": "FALSE"
+    },
+    {
+      "question_number": 40,
+      "question": "Which of the following is true for non-linear PCM codes compared to linear PCM codes?",
+      "choices": [
+        "(a) is decreased...",
+        "(b) Step size is not constant",
+        "(c) High amplitude voltages will have more quantizing levels",
+        "(d) none of the choices"
+      ],
+      "correct_answer": "(b) Step size is not constant"
+    }
+  ]
+}

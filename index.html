@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FinalShowdown - Q3 & Q4 Quiz</title>
+    <title>TheFinalShowdown</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>tailwind.config = { darkMode: 'class' }</script>
@@ -34,6 +34,14 @@
         .toast-off { background: linear-gradient(135deg, #64748b 0%, #475569 100%); color: white; }
         .identification-input { transition: all 0.2s; }
         .identification-input:focus { border-color: #3b82f6; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-5deg); }
+            25% { transform: rotate(5deg); }
+            50% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        .wiggle { animation: wiggle 0.5s ease-in-out infinite; }
     </style>
 </head>
 <body class="bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 min-h-screen flex flex-col transition-colors duration-300">
@@ -48,7 +56,7 @@
     <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-20 transition-colors">
         <div class="max-w-4xl mx-auto px-3 sm:px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3">
             <h1 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <i class="fa-solid fa-bolt text-amber-500"></i>
+                <img src="favicon.png" alt="Logo" class="w-6 h-6">
                 <span>FinalShowdown</span>
                 <span class="text-slate-400 dark:text-slate-500 font-normal text-xs sm:text-sm ml-1 hidden md:inline">Made by: Noktiks</span>
             </h1>
@@ -619,6 +627,20 @@
         }
 
         function nextQuestion() {
+            // Auto-reveal identification questions when auto-check is on
+            if (autoRevealEnabled) {
+                const data = filteredQuizData[currentQuestionIndex];
+                const qID = data.id;
+                if (data.type === 'identification' && !revealState[qID]) {
+                    const userInput = identificationAnswers[qID];
+                    if (userInput && userInput.trim()) {
+                        revealState[qID] = true;
+                        renderQuestion(false);
+                        return; // Show reveal first, user clicks Next again to proceed
+                    }
+                }
+            }
+            
             if (currentQuestionIndex < filteredQuizData.length - 1) { currentQuestionIndex++; renderQuestion(); }
             else submitQuiz();
         }
@@ -743,13 +765,25 @@
             const percentage = Math.round((correct / total) * 100);
             const grade = percentage >= 90 ? 'A' : percentage >= 80 ? 'B' : percentage >= 70 ? 'C' : percentage >= 60 ? 'D' : 'F';
             const gradeColor = percentage >= 80 ? 'text-green-600 dark:text-green-400' : percentage >= 60 ? 'text-yellow-600 dark:text-yellow-400' : 'text-red-600 dark:text-red-400';
+            
+            // Easter egg for perfect score!
+            const isPerfect = percentage === 100;
+            const iconHtml = isPerfect 
+                ? '<img src="favicon.png" alt="Perfect!" class="w-32 h-32 mx-auto mb-4 wiggle">'
+                : `<i class="fa-solid fa-trophy text-6xl ${gradeColor} mb-4"></i>`;
+            const titleHtml = isPerfect 
+                ? '<h2 class="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-2">🎉 PERFECT SCORE! 🎉</h2>'
+                : '<h2 class="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-2">Quiz Complete!</h2>';
+            const subtitleHtml = isPerfect 
+                ? '<p class="text-lg font-medium text-amber-500 dark:text-amber-400 mb-1">Congratulations from Anton :D</p><p class="text-slate-500 dark:text-slate-400">You nailed it! 🔥</p>'
+                : '<p class="text-slate-500 dark:text-slate-400">FinalShowdown</p>';
 
             container.innerHTML = `
                 <div class="fade-in text-center py-6">
                     <div class="mb-6">
-                        <i class="fa-solid fa-trophy text-6xl ${gradeColor} mb-4"></i>
-                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-800 dark:text-slate-100 mb-2">Quiz Complete!</h2>
-                        <p class="text-slate-500 dark:text-slate-400">FinalShowdown - Q3 & Q4</p>
+                        ${iconHtml}
+                        ${titleHtml}
+                        ${subtitleHtml}
                     </div>
                     <div class="bg-slate-50 dark:bg-slate-700/50 rounded-2xl p-6 mb-6 inline-block">
                         <div class="text-6xl sm:text-7xl font-bold ${gradeColor} mb-2">${percentage}%</div>

@@ -83,7 +83,7 @@
             "c. Logical channel number",
             "d. All of the choices"
           ],
-          "correct_answer": "b. Packet identifier"
+          "correct_answer": "c. Logical channel number"
         },
         {
           "question_number": 9,
